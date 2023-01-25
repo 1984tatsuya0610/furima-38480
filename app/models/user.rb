@@ -4,8 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :nickname,         presence: true
-  validates :first_name,       presence: true
-  validates :family_name,      presence: true
   validates :first_name_kana,  presence: true,format: { with: /\A[\p{katakana}  ー－&&[^ -~｡-ﾟ]]+\z/, message: "全角カタカナのみで入力して下さい"}
   validates :family_name_kana, presence: true,format: { with: /\A[\p{katakana}  ー－&&[^ -~｡-ﾟ]]+\z/, message: "全角カタカナのみで入力して下さい"}
   validates :date_of_birth,    presence: true
