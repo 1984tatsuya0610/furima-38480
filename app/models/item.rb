@@ -8,7 +8,7 @@ class Item < ApplicationRecord
     belongs_to :item_condition
     belongs_to :postage_type
     belongs_to :sender
-    belongs_to :Preparation_day
+    belongs_to :preparation_day
 
     validates :image,              presence: true
     validates :name,               presence: true
